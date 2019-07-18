@@ -1,2 +1,11 @@
 1- Ingresar 35 números por teclado y al finalizar mostrar el promedio.
 2- Ingresar 10 numeros y indicar cuantos son pares y cuantos son menores a cero.
+3- Calcular y mostrar el cubo de un número cualquiera, este número tiene que ser mayor que 0, si el numero es menor que 0 mostrar un error.
+4- Ingresar cierta cantidad de numeros e indicar si es positivo o negativo.
+5- Ingresar 20 caracteres y indicar cuantas "a, e, i, o, u" se ingresaron.
+6- Mostrar los numeros pares entre 1 y 100.
+7- Mostrar todos los numeros comprendidos entre 1 y 100 de manera decreciente.
+7- Mostrar todos los numeros comprendidos entre 1 y 100 de manera ascendiente.
+8- Diseñar un algoritmo que imrpima y sume la serie de numeros, 3.. 6.. 9..
+9- Ingresar 10 numeros, mostrar el mayor y el menor.
+10- Ingresar cierta cantidad de numeros, mostrar el numero, su cuadrado y cubo.
