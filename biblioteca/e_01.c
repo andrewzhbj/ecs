@@ -1,20 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int main(){
-	int i, *p;
+#define LINELEN	100
 
-	p = &i;		/* creo puntero a i*/
-	*p = 0;		/* establece i a 0 */
+int
+main(int argc, char** argv)
+{
+	char in_line[LINELEN], *cp;
+	int c;
 
-	printf("i: %d\n", i);
-	printf("*p: %d\n", *p);
-
-	*p += 1;	/* incrementa el apuntador (i++) */
-	printf("i: %d\n", i);
-
-	(*p)++;		/* devuelta, sin () no se puede aplicar ++*/
-	printf(" x is %d\n", i);
-
+	cp = in_line;
+	while ((c = getc(stdin)) != EOF) {
+		if (cp == &in_line[LINELEN-1] || c == '\n') {
+			/* Insert end of line marker */
+			*cp = 0;
+			if (strcmp(in_line, "stop") == 0)
+				exit(EXIT_SUCCESS);
+			else
+				printf("line was %d characters long\n", (int)(cp-in_line));
+			cp = in_line;
+		}
+		else {
+			*cp++ = c;	/*Precedence => *cp++ == *(cp++)*/
+		}
+	}
 	exit(EXIT_SUCCESS);
 }

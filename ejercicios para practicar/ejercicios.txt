@@ -1,0 +1,2 @@
+1- Ingresar 35 números por teclado y al finalizar mostrar el promedio.
+2- Ingresar 10 numeros y indicar cuantos son pares y cuantos son menores a cero.
