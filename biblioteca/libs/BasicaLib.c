@@ -5,13 +5,13 @@
 #define True 	1
 #define False 	0
 
-/* Devuelve un número entero */
+/* Devuelve un nÃºmero entero */
 int IngresarNumero(void){
 	int n = 0;
 	scanf("%d", &n);
 	return n;
 }
-/* Devuelve un número flotante */
+/* Devuelve un nÃºmero flotante */
 float IngresarFlotante(void){
 	float n = 0;
 	scanf("%f", &n);
@@ -21,7 +21,7 @@ float IngresarFlotante(void){
 char IngresarLetra(void){
 	return getchar();
 }
-/* Devuelve un número aleatorio entre un intervalo */
+/* Devuelve un nÃºmero aleatorio entre un intervalo */
 int NumeroAleatorio(int Max, int Min){
 	int n = 0;
 	srand(time(NULL));
@@ -29,7 +29,7 @@ int NumeroAleatorio(int Max, int Min){
 	return n;
 }
 
-/* Llena un vector con los parámetros dados */
+/* Llena un vector con los parÃ¡metros dados */
 void Llenar(int Datos[], int Size){
 	int i = 0, Numero = 0;
 	while(i < Size){
@@ -45,8 +45,8 @@ void Llenar(int Datos[], int Size){
 void MostrarDato(float Dato){
 	float NumeroDecimal = Dato;
 	int NumeroEntero = (int)Dato;
-	if(NumeroEntero != NumeroDecimal) printf("%.2f\n", NumeroDecimal); /* Muestra como número decimal */
-	else printf("%d\n", NumeroEntero); /* Muestra como número entero */
+	if(NumeroEntero != NumeroDecimal) printf("%.2f\n", NumeroDecimal); /* Muestra como nÃºmero decimal */
+	else printf("%d\n", NumeroEntero); /* Muestra como nÃºmero entero */
 }
 /* Muestra un texto */
 void MostrarTexto(char Texto[]){
@@ -62,29 +62,27 @@ void MostrarVector(int Datos[], int Size){
 }
 
 
-/* Devuelve verdadero si el número es positivo, falso si es negativo */
+/* Devuelve verdadero si el nÃºmero es positivo, falso si es negativo */
 int Signo(int Num){
-	if(Num > 0) return True;
-	else return False;
+	return num > 0
 }
 
-/* Devuelve el cubo de un número */
+/* Devuelve el cubo de un nÃºmero */
 int AlCubo(float Num){
 	return Num*Num*Num;
 }
 
-/* Devuelve verdadero si el número es par, falso si es impar */
+/* Devuelve verdadero si el nÃºmero es par, falso si es impar */
 int Paridad(int Num){
-	if(Num%2 == 0) return True;
-	else return False;
+	return Num % 2 == 0
 }
 
-/* Devuelve el cuadrado de un número */
+/* Devuelve el cuadrado de un nÃºmero */
 int AlCuadrado(float Num){
 	return Num*Num;
 }
 
-/* Devuelve el valor absoluto de un número */
+/* Devuelve el valor absoluto de un nÃºmero */
 int ValorAbsoluto(float Num){
 	if(Num < 0 ) return Num *= -1; /* si es negativo lo multiplica por -1 */
 	else return Num;
@@ -97,14 +95,14 @@ int Total(int Datos[], int Size){
 	return Sumatorio;
 }
 
-/* Devuelve el número minimo de un vector, dado sus elementos */
+/* Devuelve el nÃºmero minimo de un vector, dado sus elementos */
 int Minimo(int Datos[], int Size){
 	int x = 0, NumeroMinimo = 100;
 	for(x=0;x<Size;x++) if(Datos[x] < NumeroMinimo) NumeroMinimo = Datos[x];
 	return NumeroMinimo;
 }
 
-/* Devuelve el número máximo de un vector, dado sus elementos */
+/* Devuelve el nÃºmero mÃ¡ximo de un vector, dado sus elementos */
 int Maximo(int Datos[], int Size){
 	int x = 0, NumeroMaximo = 0;
 	for(x=0;x<Size;x++) if(Datos[x] > NumeroMaximo) NumeroMaximo = Datos[x];
@@ -113,12 +111,9 @@ int Maximo(int Datos[], int Size){
 
 /* Devuelve el promedio xD */
 float Promedio(float Total, float Numero){
-	float Media = Total/Numero;
-	return Media;
+	return Total/Numero;
 }
 
 int CompararLetra(char Alpha, char Beta){
-	int CodigoA = Alpha, CodigoB = Beta;
-	if(CodigoA == CodigoB) return True;
-	else return False;
+	return Alpha == Beta
 }
